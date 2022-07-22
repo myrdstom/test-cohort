@@ -1,8 +1,11 @@
 import express from 'express';
+import router from './routes/index.js';
 
 const app = express();
 
-const PORT = 5000;
+app.use(router);
+
+const PORT = 8000;
 
 app.get('/', (req, res) => {
     res.send('Welcome to Our Home Page');
